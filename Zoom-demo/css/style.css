@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+body {
+    background-color: #eee;
+}
+
+#wrap {
+    position: relative;
+    width: 400px;
+    height: 480px;
+    margin: 50px auto;
+    border: 1px solid #888;
+}
+
+#wrap .pic img {
+    width: 400px;
+    height: 400px;
+}
+
+#wrap .pic .zoom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    opacity: .4;
+    cursor: move;
+}
+
+#wrap .list {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+#wrap .list li{
+    cursor: pointer;    
+}
+
+#wrap .list .current{
+    border: 2px solid red;
+}
+
+#wrap .list img {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;       /* 解决图片底部留白，改变对齐方式，默认基线对齐 */
+}
+
+#wrap .details {
+    position: absolute;
+    /* display: none; */
+    top: 0;
+    left: 400px;
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+    border: 1px solid #888;
+    background-image: url('/images/1.jpg');
+    background-size: 266%;
+}
