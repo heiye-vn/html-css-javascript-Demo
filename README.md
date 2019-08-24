@@ -16,7 +16,9 @@
 
 ​	简述：js实现一个简单的老虎机效果
 
-​	预览地址：[Simple slot machines]([https://heiye-vn.github.io/html-css-javascript-Demo/Demo-01/Simple%20slot%20machines.html](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-01/Simple slot machines.html))；
+​	预览地址：[Simple slot machines](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-01/Simple%20slot%20machines.html)；
 
 ​	实现思路：前面布局就不用细说，js部分：先将图片存放在数组中，然后利用`Math.random()`来获取随机图片的url地址，再进行匹配验证显示的图片是否为同一张，如果是则输出 win，不是则输出 lose 。
+
+
 
