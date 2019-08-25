@@ -1,0 +1,76 @@
+<!DOCTYPE html><!--声明当前页面的文档类型 html网页 html5最新的标准-->
+
+<!--整个网页  标记标签-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>爱心跳动</title><!-- 网页标题 -->
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="描述">
+
+		<!--css样式  层叠样式表  修饰网页 -->
+		<style type="text/css">
+			* {margin: 0;padding: 0;}
+
+			/*
+				样式：
+					选择器  和  声明  组成
+			*/
+			body{
+				background-color: #000;
+			}
+
+			.one{
+				width: 205px;/*宽度*/
+				height: 300px;/*高度  px像素/单位*/
+				/*background-color: #cc33ff;/*背景颜色   #十六进制颜色*/
+				margin: 100px auto;/*外边距  复合属性  盒子以外的距  上下  左右auto 自动居中*/
+				animation:move 1s infinite alternate;/*动画: 动画名称 动画时间  运动次数  反向*/
+
+				
+
+			}
+			/*绑定动画  关键帧  规定动画怎么动*/
+			@keyframes move{
+				0%{
+					transform:scale(1);
+				}
+				100%{
+					transform:scale(1.5);/*放大*/
+				}
+				
+			}
+			.one div{
+				float:left;/*浮动 让元素横排显示*/
+				width: 150px;
+				height: 228px;
+				background-color: #ff0000;
+				/*border: 1px solid #00cc33;/*边框  大小  风格 颜色*/
+				border-radius:100px 100px 0 0;/*圆角 左上  右上 右下 左下*/
+				transform:rotate(-45deg);/*变换 transform   旋转rotate */
+				box-shadow:0 0 80px red;/*水平偏移量 垂直 模糊半径 颜色*/
+				
+			} 
+			
+			.one .right{
+				transform:rotate(45deg);/*变换 transform   旋转rotate */
+				margin-left: -95px;
+			}
+			p{
+				color:red;
+				text-align: center;
+				font-size: 100px;
+				/* text-decoration:blink; */            /* 设置字体闪烁 */
+
+			}
+
+		</style>
+	</head>
+<body>
+	<div class='one'>
+		<div class='left'></div>
+		<div class='right'></div>
+	</div>
+	<p>L O V E</p>
+</body>
+</html>
