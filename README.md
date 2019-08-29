@@ -36,6 +36,6 @@
 
 ​	简述：js实现黑白块
 
-​	Demo：[黑白块]([https://heiye-vn.github.io/html-css-javascript-Demo/Demo-04/js%E5%AE%9E%E7%8E%B0%E5%88%AB%E8%B8%A9%E7%99%BD%E5%9D%97.html](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-04/js实现别踩白块.html))；
+​	Demo：[黑白块](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-04/js实现别踩白块.html)；
 
 ​	实现思路：通过定时器在指定区域内随机生成黑方块，并给黑白区域分别添加不同的点击事件，后面通过判断分值来增加黑块生成的速度来实现难度增大。最终实现效果。
