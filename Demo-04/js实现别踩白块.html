@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="jquery-3.2.1.min.js"></script>
+
+<head>
+
+    <meta charset="UTF-8">
+    <style>
+        /*画面*/
+        #main {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 10px auto;
+            border: 4px solid black;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+        }
+        h1 span{
+            color: red;
+        }
+        /* 容器盒子 */
+        #container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            top: -100px;
+            background: white;
+        }
+
+        /*.row*/
+        .row {
+            width: 100%;
+            height: 100px;
+
+        }
+
+        /*.cell*/
+        .cell {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .black {
+            background: black;
+        }
+
+        /*
+           计分版块居中
+        */
+        #score {
+            text-align: center;
+        }
+
+        #button {
+            text-align: center;
+            margin-top: 8px;
+        }
+    </style>
+    <title>别踩白块</title>
+</head>
+
+<body>
+    <h1 >你的成绩为：<span id="score">0</span></h1>
+    <div id="main">
+        <div id="container"></div>
+    </div>
+    <div id="button">
+        <button onclick="start()">开始游戏</button>
+        <button onclick="restart()">重新开始</button>
+    </div>
+</body>
+<script>
+    var clock = null; //定时器
+    var state = 0; //0 初始化状态，1 进行中 3 失败结束
+    var speed = 2;
+
+    //  初始化界面
+    function init() {
+        for (var i = 0; i < 4; i++) {
+            crow();
+        }
+        //鼠标点击消除黑块事件委托
+        $('main').onclick = function (ev) {
+            judge(ev)
+        }
+    }
+
+    //   判断：踩黑块就计分，踩白块就结束游戏
+    function judge(ev) {
+        if (state == 3) {
+            alert('失败者禁入')
+            return;
+        }
+        if (ev.target.className.indexOf('black') == -1) {
+            fall();
+        } else {
+            ev.target.className = 'cell';
+            ev.target.parentNode.pass = 1;
+            score();
+        }
+    }
+
+    //  启动定时器
+    function start() {
+        clock = window.setInterval('move()', 30);
+    }
+    
+
+
+    // 让黑块动画获取 container 当前top的值 增加像素值
+    function move() {
+        var con = $('container');
+        var top = parseInt(window.getComputedStyle(con, null)['top']);
+        if (speed + top > 0) { //一步走多以后，直接top = 0
+            top = 0;
+        } else {
+            top += speed; //调节每次下降的像素
+        }
+        con.style.top = top + 'px';
+
+
+
+        if (top == 0) {
+            crow();
+            con.style.top = '-100px';
+            drow();
+        } else if (top == (-100 + speed)) {
+            var rows = con.childNodes;
+            if ((rows.length == 5) && (rows[rows.length - 1].pass !== 1)) {
+                fall();
+            }
+        }
+    }
+
+    //  速度增加 
+    function addSpeed() {
+        if (speed == 2) {
+            speed = 4;
+        } else if (speed == 4) {
+            speed = 5;
+        } else if (speed == 5) {
+            speed = 10;
+        } else if (speed == 10) {
+            speed = 20;
+        } else if (speed == 20) {
+            alert("你的电脑太垃圾，浏览器玩不动了");
+        }
+    }
+
+    // 结束游戏
+    function fall() {
+        clearInterval(clock);
+        state = 3;
+        alert('游戏结束！！！');
+    }
+
+
+    //  计分
+    function score() {
+        var newScore = parseInt($('score').innerHTML) + 1;
+        $('score').innerHTML = newScore;
+        if (newScore % 20 == 0) {
+            addSpeed();
+        }
+
+    }
+
+    // 创建  div.row div class = 'row'
+    function crow() {
+        var con = $('container')
+        var row = cDiv('row');
+        var classes = createSn()
+        for (var i = 0; i < 4; i++) {
+            row.appendChild(cDiv(classes[i]));
+        }
+        if (con.firstChild == null) {
+            con.appendChild(row);
+        } else {
+            con.insertBefore(row, con.firstChild);
+        }
+
+    }
+
+    // 删除最后一行黑块
+    function drow() {
+        var con = $('container');
+        if (con.childNodes.length == 6) {
+            con.removeChild(con.lastChild);
+        }
+
+    }
+
+    // 创建div className是其类名
+    function cDiv(className) {
+        var div = document.createElement('div');
+        div.className = className;
+        return div;
+    }
+
+    //返回一个数组，随机其中一个单元，值为"cell black" 其余三个皆为白色
+    function createSn() {
+        var arr = ['cell', 'cell', 'cell', 'cell'];
+        var i = Math.floor(Math.random() * 4);
+        arr[i] = 'cell black';
+        return arr;
+    }
+
+    //    按照id获取对象
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    init();
+    function restart(){
+        window.location.replace("file:///C:/Users/asus/Desktop/js%E5%AE%9E%E7%8E%B0%E5%88%AB%E8%B8%A9%E7%99%BD%E5%9D%97.html");
+    }
+</script>
+
+</html>
