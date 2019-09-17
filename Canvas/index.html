@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Canvas画板</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://at.alicdn.com/t/font_562572_1ybmlb5d2a7fd2t9.js"></script>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="options">
+        <ul id="color" class="active">
+            <li id="black" class="active"></li>
+            <li id="red"></li>
+            <li id="orange"></li>
+            <li id="yellow"></li>
+            <li id="green"></li>
+            <li id="lime"></li>
+            <li id="blue"></li>
+            <li id="purple"></li>
+        </ul>
+        <ul id="thickness" class="active">
+            <li id="thin" class="active" title="细"></li>
+            <li id="middle" title="中"></li>
+            <li id="thick" title="粗"></li>
+        </ul>
+        <ul id="actions">
+            <li title="画笔">
+                <svg id="pen" class="active">
+                    <use xlink:href="#icon-pen"></use>
+                </svg>
+            </li>
+            <li title="橡皮擦">
+                <svg id="eraser">
+                    <use xlink:href="#icon-eraser"></use>
+                </svg>
+            </li>
+            <li title="一键清空">
+                <svg id="clearall">
+                    <use xlink:href="#icon-clearall"></use>
+                </svg>
+            </li>
+            <li title="保存">
+                <svg id="save">
+                    <use xlink:href="#icon-save"></use>
+                </svg>
+            </li>
+        </ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
