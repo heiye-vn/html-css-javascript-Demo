@@ -39,3 +39,13 @@
 ​	Demo：[黑白块](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-04/js实现别踩白块.html)；
 
 ​	实现思路：通过定时器在指定区域内随机生成黑方块，并给黑白区域分别添加不同的点击事件，后面通过判断分值来增加黑块生成的速度来实现难度增大。最终实现效果。
+
+
+
+### Demo-05
+
+​	简述：原生js + canvas 实现涂鸦画板
+
+​	Demo：[Canvas-Drawing-board](http://canvas.zsp.design)
+
+​	实现思路：这是一个包含画笔、橡皮擦、一键清除、图像保存，画笔颜色等功能的canvas画板，通过js操作dom元素并结合canvas绘图实现效果。
