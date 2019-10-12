@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="作者/用户信息">
+  <meta name="Keywords" content="浏览器抓取的关键字/关键词">
+  <meta name="Description" content="内容简短描述">
+  <title>before与after伪类选择器实现八卦图</title>
+  <style type="text/css">
+    *{
+	    margin:0;padding:0;
+	}
+	body{
+	    background-color: gray;
+	}
+    div{
+	    width: 0;
+	    height: 400px;
+		margin:100px;
+	    border-left:200px solid #000;
+	    border-right:200px solid #fff;
+		border-radius:100%;
+		box-shadow:0 0 200px #000;
+	}
+    div:before,
+	div:after{
+	    display:block;
+	    width: 80px;
+		height: 80px;
+		margin-left:-100px;
+		border-radius:100%;
+		content:"";
+	}
+	div:before{                    /*  注：伪元素默认是行内元素，必须转换成块级元素且添加content属性 */
+		background-color:#fff;
+		border:60px solid #000;
+	}
+	div:after{                    /*  注：伪元素默认是行内元素，必须转换成块级元素且添加content属性 */
+		background-color: #000;
+		border:60px solid #fff;
+	}
+
+  </style>
+ </head>
+ <body>  <!-- 用户可视区域 -->
+   <div></div>
+ </body>
+</html>
