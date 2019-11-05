@@ -86,7 +86,7 @@
 
 ​	简述：canvas动态时钟
 
-​	Demo：[动态时钟]([https://heiye-vn.github.io/html-css-javascript-Demo/Demo-09/%E5%8A%A8%E6%80%81%E6%97%B6%E9%92%9F.html](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-09/动态时钟.html));
+​	Demo：[动态时钟](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-09/动态时钟.html);
 
 ​	实现思路：利用canvas实现钟表静态页面，再结合js中的date事件对画布实时重绘达到动态效果；
 
