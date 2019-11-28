@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #999999;
+        }
+
+        #box {
+            width: 1000px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        span {
+            display: inline-block;
+            margin: 0 5px;
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        距离年2019年春节还剩：xxx天xxx时xxx分xxx秒
+    </div>
+    <script>
+        let oBox = document.getElementById('box')
+
+        // 封装一个剩余时间的函数
+        function remainTime() {
+            // 设置指定时间
+            let newDate = new Date('2020-01-25 00:00:00')
+            // console.log(newDate)
+
+            // 获取当前时间
+            let nowDate = new Date()
+            // console.log(nowDate);
+
+            // 获取时间差（毫秒：ms）
+            let timeDiff = newDate - nowDate
+            // console.log(timeDiff)
+
+            // 获取剩余天数
+            let day = Math.floor(timeDiff / 1000 / 60 / 60 / 24)
+            // console.log(day);
+            day = addZero(day)
+
+            // 获取剩余小时数
+            let hour = Math.floor(timeDiff / 1000 / 60 / 60 % 24)
+            // console.log(hour);
+            hour = addZero(hour)
+
+            // 获取剩余分钟数
+            let minute = Math.floor(timeDiff / 1000 / 60 % 60)
+            // console.log(minute);
+            minute = addZero(minute)
+
+            // 获取剩余秒数
+            let second = Math.floor(timeDiff / 1000 % 60)
+            // console.log(second);
+            second = addZero(second)
+
+            oBox.innerHTML =
+                ` 距离年2019年春节还剩：<span>${day}</span>天<span>${hour}</span>时<span>${minute}</span>分<span>${second}</span>秒`
+        }
+
+        // 封装一个处理不到数字10的数（补0）
+        function addZero(n) {
+            return n < 10 ? `0${n}` : n
+        }
+
+        // 解决定时器异步执行问题，让函数先立即执行一次
+        remainTime()
+
+        // 封装一个计时器
+        setInterval(remainTime, 1000)
+    </script>
+</body>
+
+</html>
