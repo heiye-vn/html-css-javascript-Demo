@@ -96,6 +96,6 @@
 
 ​	简述：js倒计时
 
-​	Demo：[倒计时]([https://heiye-vn.github.io/html-css-javascript-Demo/Demo-10/%E5%80%92%E8%AE%A1%E6%97%B6.html](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-10/倒计时.html));
+​	Demo：[倒计时](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-10/倒计时.html);
 
 ​	实现思路：利用 JS 中的时间对象（Date）先给定指定时间，再获取现在事件，根据二者的差值（ms）再具体计算出相应天数或者时、分、秒（注：需要对时间进行补0），后面再结合定时器让时间 "跑起来"。
