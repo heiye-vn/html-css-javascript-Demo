@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bd {
+    border: 1px solid red;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+body {
+    background: #262626;
+    padding: 50px 0;
+    color: #fff;
+}
+
+#player {
+    width: 600px;
+    /* height: 400px; */
+    background: #130519de;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+#playerControl {
+    position: relative;
+    height: 200px;
+}
+
+#playerControl .playerImg {
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/*播放控制界面*/
+#pcontrol {
+    position: absolute;
+    left: 300px;
+    top: 85px;
+}
+
+#pcontrol button {
+    float: left;
+    margin: 0 10px;
+    border: 0;
+    outline: none;
+    width: 28px;
+    height: 28px;
+    background: url("../images/player.png") no-repeat
+}
+
+/*暂停*/
+#pcontrol .play1 {
+    background-position: -8px -8px
+}
+
+#pcontrol .play1:hover {
+    background-position: -49px -8px
+}
+
+/*播放*/
+#pcontrol .play2 {
+    background-position: -8px -49px
+}
+
+#pcontrol .play2:hover {
+    background-position: -49px -49px
+}
+
+/*上一曲*/
+#pcontrol .prev {
+    background-position: 0 -112px
+}
+
+#pcontrol .prev:hover {
+    background-position: -30px -112px
+}
+
+/*下一曲*/
+#pcontrol .next {
+    background-position: 0 -141px
+}
+
+#pcontrol .next:hover {
+    background-position: -30px -141px
+}
+
+/*停止播放*/
+#pcontrol .stop {
+    background-position: 0 -84px
+}
+
+#pcontrol .stop:hover {
+    background-position: -30px -84px
+}
+
+/*播放列表*/
+#playerList {
+    padding: 20px 0px
+}
+
+#playerList ul li {
+    padding: 10px 20px;
+}
+
+#playerList ul li.active,
+#playerList ul li:hover {
+    background: rgba(0, 0, 0, .4);
+    color: #665975;
+    cursor: pointer
+}
+
+/*播放进度*/
+#progrees {
+    width: 550px;
+    height: 5px;
+    background: #ccc;
+    margin: 0 auto;
+}
+
+#curProgrees {
+    width: 0px;
+    height: 100%;
+    background: darkolivegreen;
+}
+
+/*播放时间*/
+#playTime {
+    padding: 10px 25px 0px;
+    text-align: right;
+}
