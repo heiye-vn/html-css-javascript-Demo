@@ -99,3 +99,13 @@
 ​	Demo：[倒计时](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-10/倒计时.html);
 
 ​	实现思路：利用 JS 中的时间对象（Date）先给定指定时间，再获取现在事件，根据二者的差值（ms）再具体计算出相应天数或者时、分、秒（注：需要对时间进行补0），后面再结合定时器让时间 "跑起来"。
+
+
+
+### Music-Player
+
+​	简述：原生js简易版音乐播放器
+
+​	Demo：[原生JS-简易版音乐播放器](https://heiye-vn.github.io/html-css-javascript-Demo/Music-Player/play.html);
+
+​	实现思路：html结构和css样式不赘述，主要说一下js，通过获取相应标签元素利用事件监听器配合对应的功能函数实现最终效果，时间和进度条是搭配定时器完成的（功能不是很完全，哈哈！！！）。
