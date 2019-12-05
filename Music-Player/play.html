@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐播放器练习</title>
+    <link rel="stylesheet" href="css/player.css">
+    
+    <!-- 引入js文件 -->
+    <script src="./js/player.js"></script>
+    
+
+</head>
+<body>
+<!--播放器-->
+<div id="player">
+    <!--播放控件-->
+    <div id="playerControl">
+        <div class="playerImg">
+            <img src="images/1.jpg" alt="" width="150" height="150">
+
+            <!-- 音频标签 -->
+            <audio id="audio" src="./video/Faded-Alan Walker.mp3" controls ></audio>
+                
+            
+        </div>
+        <div id="pcontrol" class="clearfix">
+            <button class="prev" title="上一曲"></button>
+            <button id="play" class="play1" title="播放"></button>
+            <button class="next" title="下一曲"></button>
+            <button class="stop" title="停止"></button>
+        </div>
+    </div>
+    <!--播放进度-->
+    <div id="progrees">
+        <div id="curProgrees"></div>
+    </div>
+    <!--播放时间-->
+    <div id="playTime">
+        <span id="presentTime">00 : 00</span>
+        <span>/</span>
+        <span id="totalTime">00 : 00</span>
+    </div>
+    <!--音频列表-->
+    <div id="playerList">
+        <ul>
+            <li class="active">
+                <span class="mr10">1</span>
+                <span>Faded</span>
+                <span>-</span>
+                <span>Alan Walker</span>
+            </li>
+            <li>
+                <span class="mr10">2</span>
+                <span>Alone</span>
+                <span>-</span>
+                <span>Alan Walker</span>
+            </li>
+            <li>
+                <span class="mr10">3</span>
+                <span>Sing Me to Sleep</span>
+                <span>-</span>
+                <span>Alan Walker</span>
+            </li>
+            <li>
+                <span class="mr10">4</span>
+                <span>你的答案</span>
+                <span>-</span>
+                <span>阿冗</span>
+            </li>
+            <li>
+                <span class="mr10">5</span>
+                <span>世间美好与你环环相扣</span>
+                <span>-</span>
+                <span>柏松</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
