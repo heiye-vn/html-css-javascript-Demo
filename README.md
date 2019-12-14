@@ -109,3 +109,13 @@
 ​	Demo：[原生JS-简易版音乐播放器](https://heiye-vn.github.io/html-css-javascript-Demo/Music-Player/play.html);
 
 ​	实现思路：html结构和css样式不赘述，主要说一下js，通过获取相应标签元素利用事件监听器配合对应的功能函数实现最终效果，时间和进度条是搭配定时器完成的（功能不是很完全，哈哈！！！）。
+
+
+
+### Demo-11
+
+​	简述：基于jQuery的旋转木马卡片
+
+​	Demo：[基于jQuery的旋转木马卡片](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-11/index.html);
+
+​	实现思路：没什么具体思路，哈哈！一个jQuery插件而已，copy下来简单修改一下就完事了。。。
