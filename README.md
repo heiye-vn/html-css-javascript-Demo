@@ -46,7 +46,7 @@
 
 ​	简述：原生js + canvas 实现涂鸦画板
 
-​	Demo：[Canvas-Drawing-board](http://canvas.zsp.design)；
+​	Demo：[Canvas-Drawing-board](http://www.zsp.gold/canvasDrawing)；
 
 ​	实现思路：这是一个包含画笔、橡皮擦、一键清除、图像保存，画笔颜色等功能的canvas画板，通过js操作dom元素并结合canvas绘图实现效果。
 
