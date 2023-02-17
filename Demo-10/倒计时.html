@@ -40,7 +40,7 @@
 
 <body>
     <div id="box">
-        距离年2019年春节还剩：xxx天xxx时xxx分xxx秒
+        距离年2023年春节还剩：xxx天xxx时xxx分xxx秒
     </div>
     <script>
         let oBox = document.getElementById('box')
@@ -48,7 +48,7 @@
         // 封装一个剩余时间的函数
         function remainTime() {
             // 设置指定时间
-            let newDate = new Date('2020-01-25 00:00:00')
+            let newDate = new Date('2024-02-10 00:00:00')
             // console.log(newDate)
 
             // 获取当前时间
@@ -80,7 +80,7 @@
             second = addZero(second)
 
             oBox.innerHTML =
-                ` 距离年2019年春节还剩：<span>${day}</span>天<span>${hour}</span>时<span>${minute}</span>分<span>${second}</span>秒`
+                ` 距离年2023年春节还剩：<span>${day}</span>天<span>${hour}</span>时<span>${minute}</span>分<span>${second}</span>秒`
         }
 
         // 封装一个处理不到数字10的数（补0）
