@@ -114,8 +114,16 @@
 
 ### Demo-11
 
-​	简述：基于jQuery的旋转木马卡片
+   简述：基于jQuery的旋转木马卡片
 
 ​	Demo：[基于jQuery的旋转木马卡片](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-11/index.html);
 
 ​	实现思路：没什么具体思路，哈哈！一个jQuery插件而已，copy下来简单修改一下就完事了。。。
+
+
+
+### Demo-12
+
+   简述：时间计数
+
+   Demo：[时间计数](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-12/index.html);
