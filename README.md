@@ -66,7 +66,7 @@
 
 ​	简述：纯css实现字母跳动效果
 
-​	Demo：[跳动的字母](html-css-javascript-Demo/tree/master/Demo-06)；
+​	Demo：[跳动的字母](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-06/index.html)；
 
 ​	实现思路：外部字体引用结合css3的动画属性实现。
 
