@@ -42,7 +42,7 @@
   font-family: "digit";
   font-size: 18px;
   font-weight: 600;
-  color: rgba(255,0,0,0.7);
+  color: rgba(255,0,0,0.7 );
 }
 #loveu {
   padding: 5px;
