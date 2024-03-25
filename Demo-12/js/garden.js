@@ -148,7 +148,6 @@ Garden.prototype = {
     }
   },
   createRandomBloom: function (x, y) {
-    console.log("Garden.options", Garden.options);
     this.createBloom(
       x,
       y,
