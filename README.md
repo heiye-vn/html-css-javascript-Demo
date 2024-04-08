@@ -126,4 +126,4 @@
 
    简述：时间计数
 
-   Demo：[时间计数](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-12/index.html);
+   Demo：[时间计数](https://heiye-vn.github.io/html-css-javascript-Demo/Demo-12/index02.html);
